@@ -21,13 +21,13 @@
 <div id= "Formulario">
     @foreach (string item in ViewBag.ListaRemeras)
     {
-        <img src= "/Fotos/@item" alt="wwwroot">
+        <img src= "/Fotos/@item" alt="wwwroot1">
     }
     <input type="number" max= "10" min="1" step="1" required/>
 
 </div>
 <div id= "Formulario">
-<@foreach (string item in ViewBag.ListaPantalones)
+@foreach (string item in ViewBag.ListaPantalones)
     {
         <img src= "/Fotos/@item"alt="wwwroot1">
     }
@@ -45,7 +45,6 @@
     <input type="number" max= "10" min="1" step="1" required/>
 
 </div>
-<input type="number" max= "10" min="1" step="1" required/>
     </div>
     <p>
             <input type="submit" value = "Enviar formulario"required> 
