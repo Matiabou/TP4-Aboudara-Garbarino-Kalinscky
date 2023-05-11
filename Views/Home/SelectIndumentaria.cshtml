@@ -3,54 +3,53 @@
 }
 <h1>@ViewData["Title"]</h1>
 
+
+
 <form action="Index.cshtml">
+<div>
+    <p>
+        Elegi un Equipo:
+        <div><select>
+            
+        @foreach (string item in ViewBag.ListaEquipos)
+        {
+            <option>@item</option>
+        }
+        </select>
+    </p>
+</div>
 <div id= "Formulario">
-<img src= "/Fotos/Media_1.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_2.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_3.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_4.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_5.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_6.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_7.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_8.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_9.jpg" alt = "wwwroot">
-<img src= "/Fotos/Media_10.jpg" alt = "wwwroot">
-
+    @foreach (string item in ViewBag.ListaRemeras)
+    {
+        <img src= "/Fotos/@item" alt="wwwroot">
+    }
     <input type="number" max= "10" min="1" step="1" required/>
 
 </div>
 <div id= "Formulario">
-<img src= "/Fotos/Pantalon_1.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_2.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_3.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_4.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_5.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_6.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_7.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_8.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_9.jpg" alt = "wwwroot">
-<img src= "/Fotos/Pantalon_10.jpg" alt = "wwwroot">
+<@foreach (string item in ViewBag.ListaPantalones)
+    {
+        <img src= "/Fotos/@item"alt="wwwroot1">
+    }
+
+    <input type="number" max= "10" min="1" step="1" required/>
+
+
+</div>
+<div id= "Formulario">
+@foreach (string item in ViewBag.ListaMedias)
+    {
+        <img src= "/Fotos/@item" alt = "wwwroot2">
+    }
 
     <input type="number" max= "10" min="1" step="1" required/>
 
 </div>
-<div id= "Formulario">
-<img src= "/Fotos/Remera_1.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_2.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_3.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_4.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_5.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_6.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_7.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_8.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_9.jpg" alt = "wwwroot">
-<img src= "/Fotos/Remera_10.jpg" alt = "wwwroot">
-
-    <input type="number" max= "10" min="1" step="1" required/>
+<input type="number" max= "10" min="1" step="1" required/>
     </div>
     <p>
             <input type="submit" value = "Enviar formulario"required> 
             <input type="reset" value = "Resetear formulario"required>
         </p>
-</form>
 </div>
+</form>
