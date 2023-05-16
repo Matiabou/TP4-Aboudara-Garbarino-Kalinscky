@@ -31,7 +31,7 @@ public class HomeController : Controller
     public IActionResult GuardarIndumentaria(string Equipo, int numMedia, int numPantalon, int numRemera) {
         Indumentaria objetoIndumentaria = new Indumentaria(Equipos.ListaMedias[numMedia], Equipos.ListaPantalones[numPantalon], Equipos.ListaRemeras[numRemera]);
         Equipos.IngresarIndumentaria(Equipo, objetoIndumentaria);
-        return View("Index");
+        return RedirectToAction("Index");
     }
 
     public IActionResult Privacy()

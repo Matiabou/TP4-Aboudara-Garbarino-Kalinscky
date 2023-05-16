@@ -62,3 +62,6 @@ img{
 #Botonesfinales :hover{
   transform: scale(1.2);
 }
+h3{
+  text-align: center;
+}
