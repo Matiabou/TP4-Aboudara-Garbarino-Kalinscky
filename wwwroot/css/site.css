@@ -23,7 +23,10 @@ body {
 }
 #Formulario{
   float: left;
-  border: 3px solid black;
+  border: 3px solid rgb(107, 107, 107);
+  background-color: rgba(129, 129, 129, 0.295);
+  border-radius: 40px;
+  margin: 10px;
 }
 input{
   border-radius: 10px;
@@ -43,6 +46,19 @@ img{
   height: 9%;
   width: 9%;
 }
-#Zoom :hover{
+#submit{
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+}
+#reset{
+  margin: 10px;
+  width: 200px;
+  height: 50px;
+}
+#Botonesfinales{
+  text-align: center;
+}
+#Botonesfinales :hover{
   transform: scale(1.2);
 }

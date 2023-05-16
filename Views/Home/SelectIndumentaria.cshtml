@@ -23,7 +23,7 @@
     {
         <img src= "/Fotos/@item" alt="wwwroot1">
     }
-    <input type="number" max= "10" min="1" step="1" required name="numRemera"/>
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numRemera"/>
 
 </div>
 <div id= "Formulario">
@@ -32,7 +32,7 @@
         <img src= "/Fotos/@item"alt="wwwroot1">
     }
 
-    <input type="number" max= "10" min="1" step="1" required name="numPantalon"/>
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numPantalon"/>
 
 
 </div>
@@ -42,13 +42,13 @@
         <img src= "/Fotos/@item" alt = "wwwroot2">
     }
 
-    <input type="number" max= "10" min="1" step="1" required name="numRemera"/>
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numRemera"/>
 
 </div>
 <div>
-        <p id = "Zoom">
-            <input type="submit" value = "Enviar formulario"required href='@Url.Action("GuardarIndumentaria")'> 
-            <input type="reset" value = "Resetear formulario"required>
+        <p id = "Botonesfinales">
+            <input id = "submit" type="submit" value = "Enviar formulario"required href='@Url.Action("GuardarIndumentaria")'> 
+            <input id = "reset" type="reset" value = "Resetear formulario"required>
         </p>
 </div>
 </form>
