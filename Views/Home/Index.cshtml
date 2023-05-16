@@ -8,11 +8,12 @@
     <h2>Artículos increíbles al alcance de cualquier mortal</h2>
 </div>
 @foreach (string key in ViewBag.dicEquiposIndumentaria.Keys){
-    <h3>@key</h3>
-    <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Medias">
-    <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Pantalon">
-    <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Camiseta">
-
+    <h4>@key</h4>
+    <div id = 'mostrar'>
+        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Medias">
+        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Pantalon">
+        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Camiseta">
+    </div>
 }
 
 
