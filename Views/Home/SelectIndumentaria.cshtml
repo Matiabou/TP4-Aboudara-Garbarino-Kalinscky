@@ -5,17 +5,19 @@
 
 
 
-<form action="Index.cshtml">
+<form action = '@Url.Action("GuardarIndumentaria")'>
 <div>
     <p>
         Elegi un Equipo:
-        <div><select>
-            
-        @foreach (string item in ViewBag.ListaEquipos)
-        {
-            <option>@item</option>
-        }
-        </select>
+        <div>
+            <select name="Equipo">
+                @foreach (string item in ViewBag.ListaEquipos)
+                {
+                    <option value="@item">
+                        @item
+                    </option>
+                }
+            </select>
     </p>
 </div>
 <div id= "Formulario">
@@ -42,12 +44,13 @@
         <img src= "/Fotos/@item" alt = "wwwroot2">
     }
 
-    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numRemera"/>
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numMedia"/>
 
 </div>
 <div>
         <p id = "Botonesfinales">
-            <input id = "submit" type="submit" value = "Enviar formulario"required href='@Url.Action("GuardarIndumentaria")'> 
+            <input id = "submit" type="submit" value = "Enviar formulario"required >  
+            
             <input id = "reset" type="reset" value = "Resetear formulario"required>
         </p>
 </div>
