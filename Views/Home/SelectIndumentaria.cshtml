@@ -5,7 +5,7 @@
 
 
 
-<form action="Index.cshtml">
+<form action='@Url.Action("GuardarIndumentaria")'>
 <div>
     <p>
         Elegi un Equipo:
@@ -42,12 +42,13 @@
         <img src= "/Fotos/@item" alt = "wwwroot2">
     }
 
-    <input type="number" max= "10" min="1" step="1" required name="numRemera"/>
+    <input type="number" max= "10" min="1" step="1" required name="numMedia"/>
 
 </div>
     </div>
     <p>
-            <input type="submit" value = "Enviar formulario"required> 
+            <input  type="submit" value = "Enviar formulario"required> 
+            
             <input type="reset" value = "Resetear formulario"required>
         </p>
 </div>

@@ -12,4 +12,8 @@ static class Equipos
         EquiposIndumentaria[EquipoSeleccionado] = item;
         return true;
     }
+
+    public static void quitarEquipo(string Equipo) {
+        ListaEquipos.remove(Equipo);
+    }
 }
