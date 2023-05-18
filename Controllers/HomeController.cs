@@ -28,10 +28,11 @@ public class HomeController : Controller
         return View();
     }
 
-    public IActionResult GuardarIndumentaria(int Equipo, int Media, int Pantalon, int Remera) {
-        Indumentaria objetoIndumentaria = new Indumentaria(Equipos.ListaMedias[Media], Equipos.ListaPantalones[Pantalon], Equipos.ListaRemeras[Remera]);
-        Equipos.IngresarIndumentaria(Equipos.ListaEquipos[Equipo], objetoIndumentaria);
-        return View();
+    public IActionResult GuardarIndumentaria(string Equipo, int numMedia, int numPantalon, int numRemera) {
+        Indumentaria objetoIndumentaria = new Indumentaria(Equipos.ListaMedias[numMedia], Equipos.ListaPantalones[numPantalon], Equipos.ListaRemeras[numRemera]);
+        Equipos.IngresarIndumentaria(Equipo, objetoIndumentaria);
+        Equipos.quitarEquipoDeLaLista(Equipo);
+        return RedirectToAction("Index");
     }
 
     public IActionResult Privacy()

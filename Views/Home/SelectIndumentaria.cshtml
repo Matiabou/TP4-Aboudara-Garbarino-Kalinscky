@@ -5,17 +5,19 @@
 
 
 
-<form action='@Url.Action("GuardarIndumentaria")'>
+<form action = '@Url.Action("GuardarIndumentaria")'>
 <div>
     <p>
         Elegi un Equipo:
-        <div><select>
-            
-        @foreach (string item in ViewBag.ListaEquipos)
-        {
-            <option>@item</option>
-        }
-        </select>
+        <div>
+            <select name="Equipo">
+                @foreach (string item in ViewBag.ListaEquipos)
+                {
+                    <option value="@item">
+                        @item
+                    </option>
+                }
+            </select>
     </p>
 </div>
 <div id= "Formulario">
@@ -23,8 +25,12 @@
     {
         <img src= "/Fotos/@item" alt="wwwroot1">
     }
-    <input type="number" max= "10" min="1" step="1" required name="numRemera"/>
-
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numRemera"/>
+    <h2>
+    @for (int i = 1; i <= 10; i++){
+        @i
+    }
+    </h2>
 </div>
 <div id= "Formulario">
 @foreach (string item in ViewBag.ListaPantalones)
@@ -32,7 +38,7 @@
         <img src= "/Fotos/@item"alt="wwwroot1">
     }
 
-    <input type="number" max= "10" min="1" step="1" required name="numPantalon"/>
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numPantalon"/>
 
 
 </div>
@@ -42,6 +48,7 @@
         <img src= "/Fotos/@item" alt = "wwwroot2">
     }
 
+<<<<<<< HEAD
     <input type="number" max= "10" min="1" step="1" required name="numMedia"/>
 
 </div>
@@ -50,6 +57,16 @@
             <input  type="submit" value = "Enviar formulario"required> 
             
             <input type="reset" value = "Resetear formulario"required>
+=======
+    <input type="number" max= "10" min="1" step="1" placeholder="0" required name="numMedia"/>
+
+</div>
+<div>
+        <p id = "Botonesfinales">
+            <input id = "submit" type="submit" value = "Enviar formulario"required >  
+            
+            <input id = "reset" type="reset" value = "Resetear formulario"required>
+>>>>>>> b5d6f415bb72649b092e44ed0a7717bd27dd0dff
         </p>
 </div>
 </form>
