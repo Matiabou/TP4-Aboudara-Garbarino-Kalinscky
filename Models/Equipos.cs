@@ -12,4 +12,8 @@ static class Equipos
         EquiposIndumentaria[EquipoSeleccionado] = item;
         return true;
     }
+    public static void QuitarEquipoDeLaLista(string Equipo){
+        ListaEquipos.Remove(Equipo);
+    }
+
 }

@@ -10,9 +10,9 @@
 @foreach (string key in ViewBag.dicEquiposIndumentaria.Keys){
     <h4>@key</h4>
     <div id = 'mostrar'>
-        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Medias">
-        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Pantalon">
         <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Camiseta">
+        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Pantalon">
+        <img src="/Fotos/@ViewBag.dicEquiposIndumentaria[key].Medias">
     </div>
 }
 
